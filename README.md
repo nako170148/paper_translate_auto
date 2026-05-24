@@ -1,6 +1,6 @@
 # survey_auto
 
-論文の PDF を渡すだけで、**英語（左）／日本語（右）の二段組 PDF** を自動生成するツール。
+論文の PDF を渡すだけで**英語（左）／日本語（右）の二段組 PDF** を自動生成するツール.
 
 ```
 論文.pdf  →  translate_pdf.py  →  論文_bilingual.pdf
@@ -18,11 +18,11 @@ pip3 install pdfplumber deepl python-dotenv deep-translator
 
 ### 2. 翻訳エンジンの選択
 
-#### パターン A：Google 翻訳（APIキー不要・すぐ使える）
+#### 方法１：Google 翻訳（APIキー不要・すぐ使える）
 
-設定不要。そのまま使えます。
+設定不要でそのまま使用可能．
 
-#### パターン B：DeepL（高品質・月50万文字無料）
+#### 方法２：DeepL（高品質・月50万文字無料）
 
 1. [DeepL API Free](https://www.deepl.com/ja/pro-api) で無料登録してAPIキーを取得
 2. `.env` ファイルを作成してキーを設定：
@@ -32,7 +32,7 @@ cp .env.example .env
 # .env を開いて DEEPL_API_KEY=取得したキー に書き換える
 ```
 
-> `.env` が未設定の場合は自動的に Google 翻訳にフォールバックします。
+> `.env` が未設定の場合は自動的に Google 翻訳にフォールバックする．
 
 ---
 
@@ -60,7 +60,7 @@ python3 translate_pdf.py ~/path/t0/論文のpdf --no-compile
 python3 translate_pdf.py dummy --check-quota
 ```
 
-出力ファイルは `output/` フォルダに保存されます：
+出力ファイルは `output/` フォルダに保存される：
 
 ```
 output/
